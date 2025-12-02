@@ -1,5 +1,5 @@
+Functional Requirements:
 Mountain-Rescue Drone
-1. Create system for Alps mountain rescue center.
-2. Detect hikers/mountainers when in emegency.
-3. Respond with a drone or uav to spot the victim.
-4. 
+F-01: Create system for Alps mountain rescue center.
+F-02: Detect hikers/mountainers when in emegency.
+F-03: Respond with a drone or uav to spot the victim.

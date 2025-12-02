@@ -1,0 +1,183 @@
+@startuml sysmlv2_overview
+' SysML v2-flavored overview that runs with plain PlantUML (no external includes).
+' Run: plantuml sysmlv2_plantuml_example.puml
+title SysML v2 Overview - Alps Rescue Drone
+left to right direction
+
+skinparam packageStyle rectangle
+skinparam class {
+  BackgroundColor<<block>> HoneyDew
+  BorderColor<<block>> DarkSeaGreen
+  BackgroundColor<<requirement>> #FFF5D7
+  BorderColor<<requirement>> #C99A00
+  BackgroundColor<<usecase>> #E9F0FF
+  BorderColor<<usecase>> #2F5FE0
+}
+
+package "Requirements" {
+  class R01 <<requirement>> {
+    id = "R-01"
+    text = "Locate injured hiker <= 15 min"
+    status = proposed
+  }
+  class R02 <<requirement>> {
+    id = "R-02"
+    text = "Operate in fog/dusk"
+    status = proposed
+  }
+  class R03 <<requirement>> {
+    id = "R-03"
+    text = "Manual override at any time"
+    status = proposed
+  }
+  class R04 <<requirement>> {
+    id = "R-04"
+    text = "Minimize environmental impact"
+    status = proposed
+  }
+}
+
+package "Use Cases" {
+  class Hiker <<actor>>
+  class RescueOperator <<actor>>
+  class UC1 <<usecase>> {
+    UC1
+    Send distress signal
+  }
+  class UC2 <<usecase>> {
+    UC2
+    Launch & navigate drone
+  }
+  class UC3 <<usecase>> {
+    UC3
+    Search & identify hiker
+  }
+  class UC4 <<usecase>> {
+    UC4
+    Manual control
+  }
+
+  Hiker --> UC1 : triggers
+  RescueOperator --> UC2
+  RescueOperator --> UC3
+  RescueOperator --> UC4 : optional
+
+  UC1 ..> UC2 : <<refine>>
+  UC2 ..> UC3 : <<includes>>
+  UC2 ..> UC4 : <<extend>>
+  UC3 ..> UC4 : <<extend>>
+}
+
+package "Logical Structure" {
+  class AlpsRescueSystem <<block>> {
+    part drone : DroneSubsystem
+    part control : ControlDevice
+    part rescueCenter : RescueCenter
+  }
+
+  class DroneSubsystem <<block>> {
+    port uplink : CmdPort
+    port downlink : VideoPort
+    part nav : AutonomySW
+    part sensors : SensorSuite
+    part comms : CommsLink
+  }
+
+  class ControlDevice <<block>> {
+    part tablet : RuggedTablet
+    part app : ControlApp
+  }
+
+  class RescueCenter <<block>> {
+    part missionControl : MissionControlSW
+    part operatorWS : OperatorWorkstation
+  }
+
+  class SensorSuite <<block>> {
+    +EO/IR camera
+    +GNSS + IMU
+    +Altimeter
+    +Terrain sensor
+  }
+
+  class AutonomySW <<block>> {
+    +Search planner
+    +Obstacle avoidance
+    +Victim detection
+    +Health monitor
+  }
+
+  AlpsRescueSystem *- DroneSubsystem
+  AlpsRescueSystem *- ControlDevice
+  AlpsRescueSystem *- RescueCenter
+  DroneSubsystem *- SensorSuite
+  DroneSubsystem *- AutonomySW
+}
+
+' Requirement satisfaction and use-case realization
+R01 ..> AlpsRescueSystem : <<satisfy>>
+R02 ..> SensorSuite : <<satisfy>>
+R03 ..> ControlDevice : <<satisfy>>
+R03 ..> DroneSubsystem : <<satisfy>>
+R04 ..> AutonomySW : <<satisfy>>
+
+UC2 ..> DroneSubsystem : <<realize>>
+UC3 ..> AutonomySW : <<realize>>
+UC4 ..> ControlDevice : <<realize>>
+@enduml
+
+@startuml sysmlv2_behavior
+title SysML v2 Behavior (Activity) - Locate Injured Hiker
+start
+:Receive distress signal (UC1);
+:Estimate search area;
+:Launch drone (UC2);
+fork
+  :Fly search pattern;
+fork again
+  :Stream video + telemetry;
+end fork
+if (Victim detected?) then (yes)
+  :Send coordinates + imagery;
+  :Notify rescue center;
+else (no)
+  :Expand search corridor;
+endif
+stop
+@enduml
+
+@startuml sysmlv2_parametric
+title SysML v2 Parametric Stub for R-01
+left to right direction
+
+skinparam class {
+  BackgroundColor<<constraint>> #F4F4F4
+  BorderColor<<constraint>> #777777
+}
+
+class "TimeToLocate" as TTL <<constraint>> {
+  parameter t_dispatch : min
+  parameter t_flight   : min
+  parameter t_processing : min
+  parameter t_locate   : min
+  --
+  constraint totalTime: t_locate = t_dispatch + t_flight + t_processing
+  constraint threshold: t_locate <= 15
+}
+
+class R01_param <<requirement>> {
+  id = "R-01"
+  text = "Locate injured hiker <= 15 min"
+}
+
+class MissionControlSW <<block>>
+class AutonomySW_param <<block>> {
+  +path planner
+}
+class OnboardCompute <<block>>
+
+TTL -[dashed]-> R01_param : <<verify>>
+TTL .. MissionControlSW : t_dispatch
+TTL .. AutonomySW_param : t_flight
+TTL .. OnboardCompute : t_processing
+@enduml
