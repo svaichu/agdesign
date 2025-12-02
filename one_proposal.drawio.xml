@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.2.2">
+  <diagram name="Page-1" id="gRJJsfLgl-HwJk2wkoWX">
+    <mxGraphModel dx="5580" dy="3990" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YL3ha1BZT464OitweCqo-228" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;X + 1 System&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="3100" width="4040" x="740" y="-430" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-229" parent="YL3ha1BZT464OitweCqo-228" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-244" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Drone Swarm&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="1580" width="3110" x="1330" y="-130" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-245" parent="YL3ha1BZT464OitweCqo-244" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zXToYAX8Kkt7yJu4GiiE-1" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Hiker&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Transmition Device&lt;/p&gt;" vertex="1">
+          <mxGeometry height="70" width="140" x="-112.5" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="zXToYAX8Kkt7yJu4GiiE-2" parent="zXToYAX8Kkt7yJu4GiiE-1" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zXToYAX8Kkt7yJu4GiiE-5" edge="1" parent="1" source="zXToYAX8Kkt7yJu4GiiE-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="zXToYAX8Kkt7yJu4GiiE-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-42" y="98" />
+            </Array>
+            <mxPoint x="12" y="-125" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KycAmLaiAIl4IMz2rdQN-18" connectable="0" parent="zXToYAX8Kkt7yJu4GiiE-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="sendsSignal" vertex="1">
+          <mxGeometry relative="1" x="-0.1609" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-238" edge="1" parent="1" source="zXToYAX8Kkt7yJu4GiiE-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="KycAmLaiAIl4IMz2rdQN-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-241" connectable="0" parent="YL3ha1BZT464OitweCqo-238" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Start" vertex="1">
+          <mxGeometry relative="1" x="-0.7721" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-239" edge="1" parent="1" source="zXToYAX8Kkt7yJu4GiiE-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-155">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="-10" />
+              <mxPoint x="3605" y="-10" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-240" connectable="0" parent="YL3ha1BZT464OitweCqo-239" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Start" vertex="1">
+          <mxGeometry relative="1" x="-0.7866" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-264" edge="1" parent="1" source="zXToYAX8Kkt7yJu4GiiE-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-234">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="1855" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zXToYAX8Kkt7yJu4GiiE-8" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Mountain Rescuer&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="30" width="160" x="480" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="zXToYAX8Kkt7yJu4GiiE-9" parent="zXToYAX8Kkt7yJu4GiiE-8" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lKYjQ--SHs4hKlPES3TA-2" parent="1" style="text;strokeColor=none;fillColor=none;html=1;fontSize=48;fontStyle=1;verticalAlign=middle;align=center;strokeWidth=1;" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;Smart Ai Drone Rescue System&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="420" x="940" y="2760" as="geometry" />
+        </mxCell>
+        <mxCell id="lKYjQ--SHs4hKlPES3TA-6" parent="1" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" value="&lt;span style=&quot;color: light-dark(rgb(255, 255, 255), rgb(237, 237, 237));&quot;&gt;Subsystem Rescuestation&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="220" x="425" y="2850" as="geometry" />
+        </mxCell>
+        <mxCell id="lKYjQ--SHs4hKlPES3TA-7" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FFFFFF;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1050" y="4850" />
+              <mxPoint x="1160" y="4850" />
+              <mxPoint x="1160" y="3570" />
+            </Array>
+            <mxPoint x="1770" y="4878.125" as="sourcePoint" />
+            <mxPoint x="1440" y="3570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lKYjQ--SHs4hKlPES3TA-40" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#FFFFFF;strokeWidth=4;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="5440" />
+              <mxPoint x="270" y="4125" />
+            </Array>
+            <mxPoint x="485" y="5440" as="sourcePoint" />
+            <mxPoint x="360" y="4125" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KycAmLaiAIl4IMz2rdQN-27" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;VTOL Drone&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="1190" width="1330" x="1530" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KycAmLaiAIl4IMz2rdQN-28" parent="KycAmLaiAIl4IMz2rdQN-27" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-21" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Airframe&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Type: Hybrid Fixed-Wing&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Color: white&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Structure: Lightweight&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Control Surfaces: Ailerons, elevators and rudders&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="210" x="1800" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-22" parent="YL3ha1BZT464OitweCqo-21" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-23" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Propulsion&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ VTOL Motors: For vertical take-off and Landing&lt;br&gt;+ Forward Motor: Horizontal Trust&lt;br&gt;+ Propellers: 9&quot;, 15 g&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="210" x="2170" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-24" parent="YL3ha1BZT464OitweCqo-23" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-65" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1910" y="270" />
+              <mxPoint x="2093" y="270" />
+              <mxPoint x="2093" y="212" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-69" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-71" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-42">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1630" y="455" />
+              <mxPoint x="1630" y="645" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-72" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-44">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1630" y="455" />
+              <mxPoint x="1630" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-73" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-38">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1630" y="455" />
+              <mxPoint x="1630" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-74" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-36">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1630" y="455" />
+              <mxPoint x="1630" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-75" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-40">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1630" y="455" />
+              <mxPoint x="1630" y="1000" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-77" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-34">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1630" y="455" />
+              <mxPoint x="1630" y="1100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-92" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-90">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1630" y="455" />
+              <mxPoint x="1630" y="1200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-96" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-27">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1910" y="380" />
+              <mxPoint x="2030" y="380" />
+              <mxPoint x="2030" y="375" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-269" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-266">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-25" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Power&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Primary Power: High Capacity Li-ion 20k+ mAh&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Redundancy: to power flight controller seperately&amp;nbsp;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="210" x="1805" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-26" parent="YL3ha1BZT464OitweCqo-25" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-84" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-95" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-27" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Cooling&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Active Cooling: Fans and Heat Sinks&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ Passive Cooling: Vents and airflow channels&amp;nbsp;&lt;/span&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="210" x="2050" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-28" parent="YL3ha1BZT464OitweCqo-27" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-50" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="YL3ha1BZT464OitweCqo-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-64" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.789;exitY=0.004;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitPerimeter=0;" target="YL3ha1BZT464OitweCqo-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-29" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Computer Subsystem&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="240" width="330" x="2070" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-30" parent="YL3ha1BZT464OitweCqo-29" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-32" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;GCS Computer&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ Autopilot: PX4 + option for manual overdrive&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="210" x="2120" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-33" parent="YL3ha1BZT464OitweCqo-32" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-93" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-34" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;IMU&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Measure Accelaration, Rotation and Orientation&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="1650" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-35" parent="YL3ha1BZT464OitweCqo-34" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-80" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-36" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;GNSS Module&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Satellite positioning&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="1650" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-37" parent="YL3ha1BZT464OitweCqo-36" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-81" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-38" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Airspeed Sensor&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Speed relative to air&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="1650" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-39" parent="YL3ha1BZT464OitweCqo-38" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-79" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-40" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;SDR Module&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Enables RF Sweep&amp;nbsp;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="1650" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-41" parent="YL3ha1BZT464OitweCqo-40" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-83" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-42" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Directional Antenna&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ for AoA to determine direction of the detected signal&amp;nbsp;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="1650" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-43" parent="YL3ha1BZT464OitweCqo-42" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-82" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-252" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-242">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1920" y="770" />
+              <mxPoint x="1920" y="1875" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-44" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Comms Gateway&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ for Swarm Coordination&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="1650" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-45" parent="YL3ha1BZT464OitweCqo-44" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-59" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-57">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2705" y="265" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-46" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Cameras&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ RGB Camera&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Thermal Camera&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="2400" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-47" parent="YL3ha1BZT464OitweCqo-46" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-51" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.995;entryY=0.574;entryDx=0;entryDy=0;entryPerimeter=0;" target="YL3ha1BZT464OitweCqo-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-87" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-29">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2730" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-57" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Edge AI Compute Module&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ YOLOv8n for Thermal and normal picture recognition and AI detection of Victim&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="270" x="2570" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-58" parent="YL3ha1BZT464OitweCqo-57" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-67" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.109;entryY=-0.003;entryDx=0;entryDy=0;entryPerimeter=0;" target="YL3ha1BZT464OitweCqo-29">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2000" y="680" />
+              <mxPoint x="2106" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-70" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="YL3ha1BZT464OitweCqo-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-85" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.711;entryY=0.973;entryDx=0;entryDy=0;entryPerimeter=0;" target="YL3ha1BZT464OitweCqo-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-94" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-90" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Barometer&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Altitude measurement&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="1650" y="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-91" parent="YL3ha1BZT464OitweCqo-90" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-155" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;X - Multipropeller HexaDrones&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="1270" width="1330" x="2940" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-156" parent="YL3ha1BZT464OitweCqo-155" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-157" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Airframe&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Type: Hybrid Fixed-Wing&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Color: white&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Structure: Lightweight&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Control Surfaces: Ailerons, elevators and rudders&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="210" x="3210" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-158" parent="YL3ha1BZT464OitweCqo-157" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-161" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3320" y="260" />
+              <mxPoint x="3503" y="260" />
+              <mxPoint x="3503" y="202" />
+            </Array>
+            <mxPoint x="3320.030303030304" y="390" as="sourcePoint" />
+            <mxPoint x="3580" y="202.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-162" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-214" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.992;exitY=0.623;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitPerimeter=0;" target="YL3ha1BZT464OitweCqo-202">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3425" y="445" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-163" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-196">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3040" y="445" />
+              <mxPoint x="3040" y="635" />
+            </Array>
+            <mxPoint x="3215" y="445" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-164" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-199">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3040" y="445" />
+              <mxPoint x="3040" y="740" />
+            </Array>
+            <mxPoint x="3215" y="445" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-165" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-190">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3040" y="445" />
+              <mxPoint x="3040" y="830" />
+            </Array>
+            <mxPoint x="3215" y="445" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-166" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-187">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3040" y="445" />
+              <mxPoint x="3040" y="910" />
+            </Array>
+            <mxPoint x="3215" y="445" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-167" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3040" y="445" />
+              <mxPoint x="3040" y="990" />
+            </Array>
+            <mxPoint x="3215" y="445" as="sourcePoint" />
+            <mxPoint x="3060" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-168" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-184">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3040" y="445" />
+              <mxPoint x="3040" y="1090" />
+            </Array>
+            <mxPoint x="3215" y="445" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-169" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-212">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3040" y="445" />
+              <mxPoint x="3040" y="1190" />
+            </Array>
+            <mxPoint x="3215" y="445" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-170" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3320" y="370" />
+              <mxPoint x="3440" y="370" />
+              <mxPoint x="3440" y="365" />
+            </Array>
+            <mxPoint x="3320.030303030304" y="390" as="sourcePoint" />
+            <mxPoint x="3460" y="365" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-173" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-179">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3564.956521739131" y="420" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-174" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-206">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3670" y="365" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-177" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-179" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="YL3ha1BZT464OitweCqo-202">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-178" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-179" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.789;exitY=0.004;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3685" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-179" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Computer Subsystem&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="240" width="330" x="3480" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-180" parent="YL3ha1BZT464OitweCqo-179" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-181" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;GCS Computer&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ Autopilot: PX4 + option for manual overdrive&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="210" x="3530" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-182" parent="YL3ha1BZT464OitweCqo-181" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-183" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-184" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-179">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-184" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;IMU&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Measure Accelaration, Rotation and Orientation&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="3060" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-185" parent="YL3ha1BZT464OitweCqo-184" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-186" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-187" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-179">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-187" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;GNSS Module&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Satellite positioning&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="3060" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-188" parent="YL3ha1BZT464OitweCqo-187" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-189" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-190" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-179">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-190" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Airspeed Sensor&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Speed relative to air&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="210" x="3060" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-191" parent="YL3ha1BZT464OitweCqo-190" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-192" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-179">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3270" y="990" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-195" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-196" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-179">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-196" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Multi Protocol RF Scanner&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Fallback for tracking standard phone for coarse positioning when UWB is not available&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="3060" y="595" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-197" parent="YL3ha1BZT464OitweCqo-196" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-198" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-199" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-179">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-253" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-199" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-242">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-199" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Comms Gateway&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ for Swarm Coordination&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="3060" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-200" parent="YL3ha1BZT464OitweCqo-199" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-201" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-202" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-206">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4115" y="255" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-202" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Cameras&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ RGB Camera&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Thermal Camera&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="3810" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-203" parent="YL3ha1BZT464OitweCqo-202" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-204" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.995;entryY=0.574;entryDx=0;entryDy=0;entryPerimeter=0;" target="YL3ha1BZT464OitweCqo-157">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3580" y="175.0666666666666" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-205" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-206" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-179">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4140" y="830" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-206" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Edge AI Compute Module&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ YOLOv8n for Thermal and normal picture recognition and AI detection of Victim&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="270" x="3980" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-207" parent="YL3ha1BZT464OitweCqo-206" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-208" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-214" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.109;entryY=-0.003;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="YL3ha1BZT464OitweCqo-179">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3390" y="490" />
+              <mxPoint x="3390" y="670" />
+              <mxPoint x="3516" y="670" />
+            </Array>
+            <mxPoint x="3410.030303030304" y="500" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-209" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-190" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="YL3ha1BZT464OitweCqo-190">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-210" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-179" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.711;entryY=0.973;entryDx=0;entryDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3609.3099999999995" y="417.03" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-211" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-212" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-179">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-212" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Barometer&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Altitude measurement&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="3060" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-213" parent="YL3ha1BZT464OitweCqo-212" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-272" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-214" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-270">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-214" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Power&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Status: Charge level&lt;br&gt;+ Storage: Battery&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Output Voltage: 12 V&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Charging Voltage: 19 V&lt;/p&gt;" vertex="1">
+          <mxGeometry height="120" width="220" x="3180" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-215" parent="YL3ha1BZT464OitweCqo-214" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-216" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;Propeller&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;div&gt;&amp;nbsp;+ Num: 12 (2x 6, 2 per wing)&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ Mass: 10 g&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ Length: 7&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="95" width="220" x="3580" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-217" parent="YL3ha1BZT464OitweCqo-216" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-218" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="90" width="220" x="3460" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-219" parent="YL3ha1BZT464OitweCqo-218" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Cooling system&amp;nbsp;&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="90" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-220" parent="YL3ha1BZT464OitweCqo-219" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-221" parent="YL3ha1BZT464OitweCqo-218" style="html=1;whiteSpace=wrap;" value="stick-on heatsinks" vertex="1">
+          <mxGeometry height="20" width="194.6153846153846" x="12.692307692307692" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-222" parent="YL3ha1BZT464OitweCqo-218" style="html=1;whiteSpace=wrap;" value="vapor chamber" vertex="1">
+          <mxGeometry height="20" width="194.6153846153846" x="12.692307692307692" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-225" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-223" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-157">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-223" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Motor&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Size : 4010&lt;br&gt;+ Kv : 400 RPM per volt&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Mass: 120 g&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Voltage: 16.8 V&lt;/p&gt;" vertex="1">
+          <mxGeometry height="100" width="210" x="2990" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-224" parent="YL3ha1BZT464OitweCqo-223" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-230" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;UWB Reciever&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ For receiving from UWB transmitter&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="3060" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-231" parent="YL3ha1BZT464OitweCqo-230" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-234" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Ground Control UI&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Tablet for overwatch and controll&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="110" width="210" x="970" y="1800" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-235" parent="YL3ha1BZT464OitweCqo-234" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-248" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-242" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-199">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2890" y="1850" />
+              <mxPoint x="2890" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-249" edge="1" parent="1" source="YL3ha1BZT464OitweCqo-242" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="YL3ha1BZT464OitweCqo-44">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1570" y="1900" />
+              <mxPoint x="1570" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-242" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Mesh Network&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;- Peer-to-Peer No central hardware Server needed&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;- Orchestrates Drone Position and Coordination&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;- Sends Data recieved from Signals from/to the relevant Drones&lt;/p&gt;" vertex="1">
+          <mxGeometry height="90" width="380" x="2310" y="1830" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-243" parent="YL3ha1BZT464OitweCqo-242" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-266" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Omni Directional Antenna&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Higher Gain for Communication with Drones and UI Tablet&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="1650" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-267" parent="YL3ha1BZT464OitweCqo-266" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-270" parent="1" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;Omni Directional Antenna&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;+ Higher Gain for Communication with Drones and UI Tablet&lt;br&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="80" width="210" x="3060" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="YL3ha1BZT464OitweCqo-271" parent="YL3ha1BZT464OitweCqo-270" style="shape=component;jettyWidth=8;jettyHeight=4;" value="" vertex="1">
+          <mxGeometry height="20" relative="1" width="20" x="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

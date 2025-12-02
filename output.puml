@@ -1,183 +1,234 @@
-@startuml sysmlv2_overview
-' SysML v2-flavored overview that runs with plain PlantUML (no external includes).
-' Run: plantuml sysmlv2_plantuml_example.puml
-title SysML v2 Overview - Alps Rescue Drone
+@startuml
+' Drone Rescue TEC - SysML-lite in PlantUML (structure + requirements)
+skinparam classAttributeIconSize 0
+hide circle
 left to right direction
 
-skinparam packageStyle rectangle
-skinparam class {
-  BackgroundColor<<block>> HoneyDew
-  BorderColor<<block>> DarkSeaGreen
-  BackgroundColor<<requirement>> #FFF5D7
-  BorderColor<<requirement>> #C99A00
-  BackgroundColor<<usecase>> #E9F0FF
-  BorderColor<<usecase>> #2F5FE0
+package "System Context" {
+  class DroneRescueTEC <<system>> {
+    mission = "Deliver confirmed human coordinate <=15min"
+    environment = "Alpine canopy, fog/dusk, multipath"
+    ops = "Manual override and safe states always available"
+  }
+
+  class DistressInput <<external>> {
+    channels: UWB tag (preferred)
+    GNSS/LoRa coordinates
+    manual report via phone/radio
+  }
+
+  class RescueTeam <<external>> {
+    actions: dispatch, medical prep, extraction
+  }
 }
+
+package "Ground Segment" {
+  class GroundControlStation <<subsystem>> {
+    UI: distress intake, polygon draw/edit
+    Overlays: geofence, live anchors/VTOL, media
+    Outputs: dispatch package to rescue team
+  }
+
+  class MissionAutomation <<subsystem>> {
+    Plans: launch, anchor RTK points, RTL/hover fail-safe
+    Guards: endurance, weather, geofence, ADS-B/TCAS
+    Interfaces: operator overrides at any time
+  }
+
+  class LocalizationEngine <<subsystem>> {
+    Priority: UWB TDoA for sub-meter fix
+    Fallback: AoA/RSSI fusion to <=10 m
+    Outputs: coordinate, covariance, confidence stream
+  }
+
+  class CommunicationsMesh <<subsystem>> {
+    Links: UWB, Wi-Fi/mesh, LoRa beacon, optional LTE
+    Behaviors: multi-hop backhaul, QoS for telemetry/media
+    Resilience: geofence-aware reroute; edge-first (no cloud dep)
+  }
+}
+
+package "VTOL Relay Drone" {
+  class VTOL_Relay <<subsystem>> {
+    role = "High-altitude mesh relay + AoA scout"
+    behavior = "Launch first; canopy-clear loiter"
+  }
+  class VTOL_Airframe <<component>> {
+    type = "Fixed-wing VTOL hybrid"
+    envelope = "Canopy-clear, endurance-optimized"
+  }
+  class VTOL_PropulsionPower <<component>> {
+    lift_cruise = "VTOL lift + cruise propulsors"
+    power = "Li-ion pack; power/thermal monitor"
+  }
+  class VTOL_NavigationAvionics <<component>> {
+    sensors = "GNSS/RTK, IMU, baro, mag"
+    functions = "Waypoint hold, geofence, ADS-B awareness"
+  }
+  class VTOL_CommsSDR <<component>> {
+    radios = "Mesh, LoRa beacon, optional LTE"
+    SDR = "Wideband AoA sweep, bearing estimate"
+    antennas = "Directional + omni"
+  }
+  class VTOL_EdgeCompute <<component>> {
+    tasks = "AoA processing, link management"
+  }
+  class VTOL_Safety <<component>> {
+    modes = "Manual override, hover/RTL, lost-link safe"
+  }
+}
+
+package "Anchor Drone (x3 typical)" {
+  class Anchor_Drone <<subsystem>> {
+    role = "RTK anchor, TDoA node, confirmer, optional payload drop"
+    behavior = "Auto-fly to anchor points; hover; controlled descent"
+  }
+  class Anchor_Airframe <<component>> {
+    type = "Multirotor; precision hover"
+    envelope = "Forest/fog/dusk tolerant"
+  }
+  class Anchor_PropulsionPower <<component>> {
+    propulsion = "Multi-rotor lift"
+    power = "Smart battery; power guard"
+  }
+  class Anchor_NavigationAvionics <<component>> {
+    sensors = "GNSS/RTK, IMU, baro"
+    functions = "Geofence, PTP/RTK time sync, micro-positioning"
+  }
+  class Anchor_CommsSensors <<component>> {
+    radios = "UWB node, mesh link, LoRa beacon"
+    SDR = "RSSI/AoA support"
+    payload = "Thermal + RGB gimbal"
+  }
+  class Anchor_EdgeCompute <<component>> {
+    tasks = "TDoA solver, AoA/RSSI fusion, CNN detection"
+  }
+  class Anchor_SafetyPayload <<component>> {
+    modes = "Manual override, hover/RTL, link-loss safe"
+    payload = "Optional dropper; release interlocks"
+  }
+}
+
+' Composition relationships (structure)
+DroneRescueTEC o-- GroundControlStation
+DroneRescueTEC o-- MissionAutomation
+DroneRescueTEC o-- LocalizationEngine
+DroneRescueTEC o-- CommunicationsMesh
+DroneRescueTEC o-- VTOL_Relay
+DroneRescueTEC o-- "3" Anchor_Drone
+DroneRescueTEC .. RescueTeam : dispatch coordinates
+DistressInput ..> GroundControlStation : distress data
+GroundControlStation --> MissionAutomation : missions/overrides
+MissionAutomation --> VTOL_Relay : launch/waypoints
+MissionAutomation --> Anchor_Drone : anchor plan
+CommunicationsMesh <.. VTOL_CommsSDR
+CommunicationsMesh <.. Anchor_CommsSensors
+LocalizationEngine <- Anchor_EdgeCompute : TDoA/AoA/RSSI
+LocalizationEngine <- VTOL_CommsSDR : AoA bearing
+GroundControlStation <- LocalizationEngine : coords/confidence
+
+' VTOL composition
+VTOL_Relay o-- VTOL_Airframe
+VTOL_Relay o-- VTOL_PropulsionPower
+VTOL_Relay o-- VTOL_NavigationAvionics
+VTOL_Relay o-- VTOL_CommsSDR
+VTOL_Relay o-- VTOL_EdgeCompute
+VTOL_Relay o-- VTOL_Safety
+
+' Anchor composition
+Anchor_Drone o-- Anchor_Airframe
+Anchor_Drone o-- Anchor_PropulsionPower
+Anchor_Drone o-- Anchor_NavigationAvionics
+Anchor_Drone o-- Anchor_CommsSensors
+Anchor_Drone o-- Anchor_EdgeCompute
+Anchor_Drone o-- Anchor_SafetyPayload
 
 package "Requirements" {
-  class R01 <<requirement>> {
+  class F01_Distress_Intake <<requirement>> {
+    id = "F-01"
+    text = "Accept distress inputs and define search polygon"
+  }
+  class F02_Launch_Search <<requirement>> {
+    id = "F-02"
+    text = "Launch drone(s) to spot injured hiker"
+  }
+  class F03_Localize_Confirm <<requirement>> {
+    id = "F-03"
+    text = "Localize, refine, and confirm with updates"
+  }
+
+  class R01_15min <<requirement>> {
     id = "R-01"
-    text = "Locate injured hiker <= 15 min"
-    status = proposed
+    text = "Confirmed coordinate within 15 min; incremental updates"
   }
-  class R02 <<requirement>> {
+  class R02_SubMeter <<requirement>> {
     id = "R-02"
-    text = "Operate in fog/dusk"
-    status = proposed
+    text = "Sub-meter (0.1–2 m) accuracy for spotting"
   }
-  class R03 <<requirement>> {
-    id = "R-03"
-    text = "Manual override at any time"
-    status = proposed
-  }
-  class R04 <<requirement>> {
+  class R04_Alpine_Edge <<requirement>> {
     id = "R-04"
-    text = "Minimize environmental impact"
-    status = proposed
+    text = "Operate in alpine canopy/fog with edge processing"
+  }
+  class R05_Safety_Override <<requirement>> {
+    id = "R-05"
+    text = "Manual override and safe states (hover/RTL) anytime"
+  }
+  class R06_Cost_Efficiency <<requirement>> {
+    id = "R-06"
+    text = "Prefer COTS, efficient compute/power, quiet"
+  }
+  class R07_Payload_Option <<requirement>> {
+    id = "R-07"
+    text = "Optional payload drop/hover without comms loss"
   }
 }
 
-package "Use Cases" {
-  class Hiker <<actor>>
-  class RescueOperator <<actor>>
-  class UC1 <<usecase>> {
-    UC1
-    Send distress signal
-  }
-  class UC2 <<usecase>> {
-    UC2
-    Launch & navigate drone
-  }
-  class UC3 <<usecase>> {
-    UC3
-    Search & identify hiker
-  }
-  class UC4 <<usecase>> {
-    UC4
-    Manual control
-  }
+' Requirement satisfaction mapping
+GroundControlStation ..> F01_Distress_Intake : satisfies
+MissionAutomation ..> F02_Launch_Search : satisfies
+VTOL_Relay ..> F02_Launch_Search : satisfies
+Anchor_Drone ..> F02_Launch_Search : satisfies
+LocalizationEngine ..> F03_Localize_Confirm : satisfies
+Anchor_EdgeCompute ..> F03_Localize_Confirm : supports
+GroundControlStation ..> F03_Localize_Confirm : supports
 
-  Hiker --> UC1 : triggers
-  RescueOperator --> UC2
-  RescueOperator --> UC3
-  RescueOperator --> UC4 : optional
+DroneRescueTEC ..> R01_15min : satisfies
+LocalizationEngine ..> R02_SubMeter : satisfies
+Anchor_EdgeCompute ..> R02_SubMeter : supports
+Anchor_Drone ..> R04_Alpine_Edge : satisfies
+VTOL_Relay ..> R04_Alpine_Edge : supports
+VTOL_Safety ..> R05_Safety_Override : satisfies
+Anchor_SafetyPayload ..> R05_Safety_Override : satisfies
+DroneRescueTEC ..> R06_Cost_Efficiency : satisfies
+Anchor_SafetyPayload ..> R07_Payload_Option : satisfies
+VTOL_Safety ..> R07_Payload_Option : supports
 
-  UC1 ..> UC2 : <<refine>>
-  UC2 ..> UC3 : <<includes>>
-  UC2 ..> UC4 : <<extend>>
-  UC3 ..> UC4 : <<extend>>
-}
-
-package "Logical Structure" {
-  class AlpsRescueSystem <<block>> {
-    part drone : DroneSubsystem
-    part control : ControlDevice
-    part rescueCenter : RescueCenter
-  }
-
-  class DroneSubsystem <<block>> {
-    port uplink : CmdPort
-    port downlink : VideoPort
-    part nav : AutonomySW
-    part sensors : SensorSuite
-    part comms : CommsLink
-  }
-
-  class ControlDevice <<block>> {
-    part tablet : RuggedTablet
-    part app : ControlApp
-  }
-
-  class RescueCenter <<block>> {
-    part missionControl : MissionControlSW
-    part operatorWS : OperatorWorkstation
-  }
-
-  class SensorSuite <<block>> {
-    +EO/IR camera
-    +GNSS + IMU
-    +Altimeter
-    +Terrain sensor
-  }
-
-  class AutonomySW <<block>> {
-    +Search planner
-    +Obstacle avoidance
-    +Victim detection
-    +Health monitor
-  }
-
-  AlpsRescueSystem *- DroneSubsystem
-  AlpsRescueSystem *- ControlDevice
-  AlpsRescueSystem *- RescueCenter
-  DroneSubsystem *- SensorSuite
-  DroneSubsystem *- AutonomySW
-}
-
-' Requirement satisfaction and use-case realization
-R01 ..> AlpsRescueSystem : <<satisfy>>
-R02 ..> SensorSuite : <<satisfy>>
-R03 ..> ControlDevice : <<satisfy>>
-R03 ..> DroneSubsystem : <<satisfy>>
-R04 ..> AutonomySW : <<satisfy>>
-
-UC2 ..> DroneSubsystem : <<realize>>
-UC3 ..> AutonomySW : <<realize>>
-UC4 ..> ControlDevice : <<realize>>
+note "Assumptions: UWB tag preferred; LTE only if permitted; 3 anchors typical for TDoA; cloud not required." as N1
+DroneRescueTEC .. N1
 @enduml
 
-@startuml sysmlv2_behavior
-title SysML v2 Behavior (Activity) - Locate Injured Hiker
+
+@startuml
+title Operational Scenario Activity (15 min target)
 start
-:Receive distress signal (UC1);
-:Estimate search area;
-:Launch drone (UC2);
+:Distress intake at GCS (UWB preferred / GNSS / LoRa / manual);
+:Operator draws/edits search polygon; geofence loaded;
+:MissionAutomation checks endurance, weather, RTK corrections;
+:Launch VTOL relay; climb to canopy-clear altitude;
+:Establish mesh backhaul; SDR AoA sweep for bearing;
 fork
-  :Fly search pattern;
-fork again
-  :Stream video + telemetry;
+  :Plan RTK anchor points inside polygon;
+  :Launch 3 anchor drones; geofence, hover, time-sync (PTP/RTK);
 end fork
-if (Victim detected?) then (yes)
-  :Send coordinates + imagery;
-  :Notify rescue center;
-else (no)
-  :Expand search corridor;
+if (UWB pulses detected?) then (Yes)
+  :Anchors compute TDoA for sub-meter fix;
+else (No)
+  :Fuse VTOL AoA with anchor RSSI/AoA (<=~10 m);
 endif
+:Nearest anchor descends slightly; runs thermal/RGB CNN;
+:Send snapshots + refined coord/confidence to GCS overlays;
+:Operator may manual-override any drone at any time;
+:Dispatch confirmed coordinate to rescue team;
+:Option: maintain relay hover / payload drop / RTL;
 stop
-@enduml
-
-@startuml sysmlv2_parametric
-title SysML v2 Parametric Stub for R-01
-left to right direction
-
-skinparam class {
-  BackgroundColor<<constraint>> #F4F4F4
-  BorderColor<<constraint>> #777777
-}
-
-class "TimeToLocate" as TTL <<constraint>> {
-  parameter t_dispatch : min
-  parameter t_flight   : min
-  parameter t_processing : min
-  parameter t_locate   : min
-  --
-  constraint totalTime: t_locate = t_dispatch + t_flight + t_processing
-  constraint threshold: t_locate <= 15
-}
-
-class R01_param <<requirement>> {
-  id = "R-01"
-  text = "Locate injured hiker <= 15 min"
-}
-
-class MissionControlSW <<block>>
-class AutonomySW_param <<block>> {
-  +path planner
-}
-class OnboardCompute <<block>>
-
-TTL -[dashed]-> R01_param : <<verify>>
-TTL .. MissionControlSW : t_dispatch
-TTL .. AutonomySW_param : t_flight
-TTL .. OnboardCompute : t_processing
 @enduml
