@@ -1,0 +1,92 @@
+@startuml DroneRescueTEC_Context
+skinparam componentStyle rectangle
+skinparam shadowing false
+left to right direction
+
+title Drone Rescue TEC – Context & Subsystems (SysML-like)
+
+actor "Distressed Hiker" as Hiker
+actor "Mountain Rescuer" as Rescuer
+actor "Public/Cell Network\n(optional)" as Network
+
+package "Drone Rescue TEC System" <<system>> {
+  component "Rescue Control Center\n<<subsystem>>\n- intake distress\n- define search area\n- monitor SLA (15 min locate)" as RCC
+  component "Control Device / GCS\n<<subsystem>>\n- mission planning\n- manual sticks\n- geofence upload" as GCS
+  component "Drone\n<<subsystem>>" as Drone
+}
+
+Hiker --> RCC : distress call / app SOS\n(coarse coordinates)
+RCC --> GCS : search polygon + mission tasking\n(SAR playbook)
+GCS --> Drone : launch + mission upload\n(control link, geofence)
+Drone --> GCS : telemetry, video/thermal stream,\ndetections, confidence
+GCS --> Rescuer : confirmed coordinates,\nprogress updates
+Rescuer --> GCS : manual takeover request
+GCS --> Drone : manual RC input / RTL / hover
+Drone --> Hiker : PA/voice, strobe, optional drop kit
+Network .. RCC : map layers / backup comms
+
+note right of Drone
+R-01: deliver confirmed human coordinate within 15 min\nR-02: sub-meter spotting accuracy (0.1–2 m)\nR-04: operate in canopy/fog/dusk via edge processing\nR-05: manual override + safe-state (hover/RTL)\nR-06: prefer COTS, low power/quiet profile\nR-07: optional payload drop / observation hover
+end note
+@enduml
+
+
+@startuml DroneRescueTEC_DroneIBD
+skinparam componentStyle rectangle
+skinparam shadowing false
+left to right direction
+
+title Drone Subsystem – Internal Block Diagram (detailed)
+
+package "Drone" <<subsystem>> {
+  component "Power System\n- smart battery\n- BMS + PDB\n- power telemetry" as Power
+  component "Airframe & Propulsion\n- rotors + ESCs\n- low-noise props" as Propulsion
+  component "Flight Controller (FCU)\n- stabilization & flight plan\n- failsafe: hover/RTL" as FCU
+  component "Navigation Sensors\n- GNSS (multi-const/RTK)\n- IMU, baro, magnetometer\n- altimeter/terrain" as NavSensors
+  component "Perception Suite\n- EO/IR gimbal\n- thermal camera\n- LiDAR/rangefinder" as Perception
+  component "Edge AI Compute\n- detection/classification\n- fusion & localization\n- SLAM/mapping" as EdgeAI
+  component "Mission Manager\n- search patterns\n- geofence + NFZ\n- SLA timer (15 min)" as MissionMgr
+  component "Comms Stack\n- primary C2/telemetry RF\n- video link\n- LTE/Sat backup" as Comms
+  component "Safety & Health\n- link monitor\n- sensor voting\n- degraded-mode handling" as Safety
+  component "Payload Options\n- loudspeaker/PA\n- beacon/relay\n- drop kit (aid)" as Payload
+  component "Lighting & Markers\n- strobes/IR\n- spotlight for night/fog" as Lighting
+}
+
+Power --> Propulsion : DC power
+Power --> FCU
+Power --> EdgeAI
+Power --> Comms
+Power --> Lighting
+
+NavSensors --> FCU : attitude/position
+NavSensors --> MissionMgr : accuracy/health
+Safety --> FCU : failsafe triggers
+Safety --> Comms : link state / heartbeat
+
+Perception --> EdgeAI : video/thermal/point cloud
+EdgeAI --> MissionMgr : detections + confidence\n(heat signatures, human posture)
+EdgeAI --> Comms : compressed stream / snapshots
+
+MissionMgr --> FCU : waypoints / velocity setpoints
+MissionMgr --> Comms : telemetry + search progress
+Comms --> MissionMgr : mission upload / geofence
+Comms --> FCU : manual RC override
+
+FCU --> Propulsion : motor commands
+MissionMgr --> Payload : deploy aid / broadcast
+Comms --> Payload : manual payload trigger
+MissionMgr --> Lighting : search/ID lighting cmds
+Lighting --> MissionMgr : status
+
+note bottom of NavSensors
+RTK-GNSS + terrain sensing provide sub-meter\nlocalization; baro/LiDAR enable canopy/low-altitude flight.
+end note
+
+note bottom of EdgeAI
+Edge fusion reduces cloud dependency; thermal + LiDAR support fog/dusk searching; outputs human coordinate confidence over time.
+end note
+
+note bottom of Safety
+Implements hover/RTL on link loss, sensor degradation,\nor low battery to satisfy manual override and safe-state constraints.
+end note
+@enduml
