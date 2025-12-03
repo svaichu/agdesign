@@ -4,7 +4,7 @@ skinparam classAttributeIconSize 0
 hide circle
 left to right direction
 
-package "System Context" {
+packag "System Context" {
   class DroneRescueTEC <<system>> {
     mission = "Deliver confirmed human coordinate <=15min"
     environment = "Alpine canopy, fog/dusk, multipath"
